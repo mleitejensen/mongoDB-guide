@@ -1,6 +1,7 @@
 import './App.css'
 import video from "./assets/GuideToMongoDB.webm"
-import sub from "./assets/subtitles.vtt"
+import enSub from "./assets/subtitles.vtt"
+import noSub from "./assets/noSub.vtt"
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
         <ul className='list'>
           <li>En maskin som kjører Ubuntu</li>
           <li>Tilgang til internett</li>
-          <li>Noe mer</li>
+          <li>Hvis du lurer på hvordan du lager en VM kan du kille <a href="http://10.12.6.67">her</a></li>
           <li>Enda mer</li>
         </ul>
       </div>
@@ -27,7 +28,8 @@ function App() {
       <div className="card">
         <h3>Her er en video som går igjennom det.</h3>
         <video src={video} controls type="video/webm" width="100%">
-        <track default src={sub} />
+        <track default label="English" kind="subtitles" srclang="en" src={enSub} />
+        <track default label="Norsk" kind="subtitles" srclang="no" src={noSub} />
         </video>
       </div>
 
