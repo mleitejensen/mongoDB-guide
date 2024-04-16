@@ -1,5 +1,6 @@
 import './App.css'
 import video from "./assets/GuideToMongoDB.webm"
+import sub from "./assets/subtitles.vtt"
 
 function App() {
 
@@ -25,7 +26,9 @@ function App() {
 
       <div className="card">
         <h3>Her er en video som går igjennom det.</h3>
-        <video src={video} controls type="video/webm" width="100%"></video>
+        <video src={video} controls type="video/webm" width="100%">
+        <track default src={sub} />
+        </video>
       </div>
 
       
