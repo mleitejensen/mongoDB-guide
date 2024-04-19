@@ -2,6 +2,7 @@ import './App.css'
 import video from "./assets/GuideToMongoDB.webm"
 import enSub from "./assets/subtitles.vtt"
 import noSub from "./assets/noSub.vtt"
+import image1 from "./assets/1.png"
 
 function App() {
 
@@ -28,7 +29,7 @@ function App() {
       <div className="card">
         <h3>Her er en video som går igjennom det.</h3>
         <video src={video} controls type="video/webm" width="100%">
-        <track default label="English" kind="subtitles" srclang="en" src={enSub} />
+          <track default label="English" kind="subtitles" srclang="en" src={enSub} />
         <track default label="Norsk" kind="subtitles" srclang="no" src={noSub} />
         </video>
       </div>
@@ -57,6 +58,11 @@ function App() {
           <li>sudo systemctl restart mongod</li>
           <li>mongosh [IP]</li>
         </ul>
+      </div>
+
+      <div className="card">
+        <img src={image1} alt="Mongosh terminal" />
+        <h3>På linjen hvor det står "Connecting to:", er databse URI-en din. <br /> Denne trenger du når du skal koble til databasen igjennom javascript.</h3>
       </div>
 
       <footer className="read-the-docs">
