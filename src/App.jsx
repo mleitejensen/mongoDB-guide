@@ -1,8 +1,10 @@
 import './App.css'
-import video from "./assets/GuideToMongoDB.webm"
+import video from "./assets/Tutorial.mp4"
 import enSub from "./assets/subtitles.vtt"
 import noSub from "./assets/noSub.vtt"
 import image1 from "./assets/1.png"
+import image2 from "./assets/2.png"
+import image3 from "./assets/3.png"
 
 function App() {
 
@@ -21,16 +23,16 @@ function App() {
         <ul className='list'>
           <li>En maskin som kjører Ubuntu</li>
           <li>Tilgang til internett</li>
-          <li>Hvis du lurer på hvordan du lager en VM kan du kille <a href="http://10.12.6.67">her</a></li>
+          <li>Hvis du lurer på hvordan du lager en VM kan du klikke <a href="http://10.12.6.67">her</a></li>
           <li>Enda mer</li>
         </ul>
       </div>
 
       <div className="card">
         <h3>Her er en video som går igjennom det.</h3>
-        <video src={video} controls type="video/webm" width="100%">
-          <track default label="English" kind="subtitles" srclang="en" src={enSub} />
-        <track default label="Norsk" kind="subtitles" srclang="no" src={noSub} />
+        <video src={video} controls type="video/mp4" width="100%">
+          <track default label="English" kind="subtitles" srcLang="en" src={enSub} />
+          <track default label="Norsk" kind="subtitles" srcLang="no" src={noSub} />
         </video>
       </div>
 
@@ -63,6 +65,20 @@ function App() {
       <div className="card">
         <img src={image1} alt="Mongosh terminal" />
         <h3>På linjen hvor det står "Connecting to:", er databse URI-en din. <br /> Denne trenger du når du skal koble til databasen igjennom javascript.</h3>
+      </div>
+
+      <div className='line'></div>
+
+      <div className="card">
+        <img src={image2} alt="Koble til database med javascript og mongoose" />
+        <h3>Her er et eksempel på hvordan man kan koble til databasen med javascript og mongoose. Jeg vil anbefale å bruke mongoose over mongodb, fordi det er lettere å sette opp.</h3>
+      </div>
+
+      <div className='line'></div>
+
+      <div className="card">
+        <img src={image3} alt="Koble til database med javascript og mongodb" />
+        <h3>Her er et eksempel på hvordan man kan koble til databasen med javascript og mongodb.</h3>
       </div>
 
       <footer className="read-the-docs">
