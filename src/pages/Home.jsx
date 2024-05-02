@@ -70,7 +70,7 @@ function Home() {
 
       <div className="card">
         <img src={image2} alt="Koble til database med javascript og mongoose" />
-        <h3>Her er et eksempel på hvordan man kan koble til databasen med javascript og mongoose. Jeg vil anbefale å bruke mongoose over mongodb, fordi det er lettere å sette opp.</h3>
+        <h3>Her er et eksempel på hvordan man kan koble til databasen med javascript og mongoose. Jeg vil anbefale å bruke mongoose over mongodb, fordi det er lettere å sette opp og det er lettere å bruke.</h3>
       </div>
 
       <div className='line'></div>
