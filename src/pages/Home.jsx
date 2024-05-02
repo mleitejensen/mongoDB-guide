@@ -5,6 +5,8 @@ import image1 from "../assets/1.png"
 import image2 from "../assets/2.png"
 import image3 from "../assets/3.png"
 
+import { Tooltip } from 'react-tooltip'
+
 function Home() {
 
   document.title = "Guide til MongoDB på ubuntu"
@@ -23,7 +25,6 @@ function Home() {
           <li>En maskin som kjører Ubuntu</li>
           <li>Tilgang til internett</li>
           <li>Hvis du lurer på hvordan du lager en VM kan du klikke <a href="http://10.12.6.67">her</a></li>
-          <li>Enda mer</li>
         </ul>
       </div>
 
@@ -38,16 +39,25 @@ function Home() {
       
       <div className="card">
         <h3>Her er kommandoene som blir brukt i videoen.</h3>
+        <Tooltip anchorSelect=".sudo" place="top">
+          "Sudo" betyr "superbruker gjør," og lar brukere utføre kommandoer med forhøyede rettigheter.
+        </Tooltip>
+        <Tooltip anchorSelect=".systemctl" place="top">
+          Systemctl er en kommando i Unix/Linux-systemer som brukes til å administrere systemtjenester, som å starte, stoppe og starte på nytt.
+        </Tooltip>
+        <Tooltip anchorSelect=".echo" place="top">
+          Echo er en kommando i Unix/Linux-systemer som brukes til å vise en linje med tekst eller variabelt innhold i terminalen.
+        </Tooltip>
         <ul>
-          <li>sudo apt-get install gnupg curl</li>
+          <li><a className="sudo">sudo</a> apt-get install gnupg curl</li>
           <li>curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
    --dearmor
           </li>
-          <li>echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list</li>
+          <li><a className="echo">echo</a> "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list</li>
           <li>sudo apt-get update</li>
           <li>sudo apt-get install -y mongodb-org</li>
-          <li>sudo systemctl start mongod</li>
+          <li>sudo <a className="systemctl">systemctl</a> start mongod</li>
           <li>sudo systemctl daemon-reload</li>
           <li>sudo systemctl status mongod</li>
           <li>sudo systemctl enable mongod</li>
