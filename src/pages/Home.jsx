@@ -30,8 +30,8 @@ function Home() {
       <div className="card">
         <h3>Her er en video som går igjennom det.</h3>
         <video src={video} controls type="video/mp4" width="100%">
-          <track default label="English" kind="subtitles" srcLang="en" src={enSub} />
           <track default label="Norsk" kind="subtitles" srcLang="no" src={noSub} />
+          <track default label="English" kind="subtitles" srcLang="en" src={enSub} />
         </video>
       </div>
 
