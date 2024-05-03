@@ -18,7 +18,7 @@
     },
     "commands": {
         "title": "Her er kommandoene som blir brukt i videoen.",
-        "sudo": "'Sudo' betyr 'superbruker gjør,' og lar brukere utføre kommandoer med forhøyede rettigheter.",
+        "sudo": "'Sudo' betyr 'superuser do,' og lar brukere utføre kommandoer med forhøyede rettigheter.",
         "systemctl": "Systemctl er en kommando i Unix/Linux-systemer som brukes til å administrere systemtjenester, som å starte, stoppe og starte på nytt.",
         "echo": "Echo er en kommando i Unix/Linux-systemer som brukes til å vise en linje med tekst eller variabelt innhold i terminalen."
     },
