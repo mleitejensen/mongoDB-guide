@@ -9,35 +9,52 @@ import noText from "../assets/noText.json"
 import enText from "../assets/enText.json"
 
 import { Tooltip } from 'react-tooltip'
+import { useState } from "react"
 
 function Home() {
+  const [lang, setLang] = useState(noText)
 
   document.title = noText?.title
+
+  const changeTextToNO = () => {
+    setLang(noText)
+  }
+
+  const changeTextToEN = () => {
+    if(lang?.lang === "NO"){
+      console.log("NO")
+    }
+    setLang(enText)
+    if(lang?.lang === "NO"){
+      console.log("NO")
+    }
+  }
+
 
   return (
     <>
       <div className="lang">
-        <button>NO</button>
-        <button>EN</button>
+        <button onClick={changeTextToNO} disabled={lang?.lang === "NO"}>NO</button>
+        <button onClick={changeTextToEN} disabled={lang?.lang === "EN"}>EN</button>
       </div>
 
-      <h1>{noText?.heading?.title} <code>Guide</code></h1>
+      <h1>{lang?.heading?.title} <code>Guide</code></h1>
       <div className="card">
-        <h2>{noText?.heading?.heading}</h2>
-        <h3>{noText?.heading?.heading2}<a href="https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/">{noText?.click}</a></h3>
+        <h2>{lang?.heading?.heading}</h2>
+        <h3>{lang?.heading?.heading2}<a href="https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/">{lang?.click}</a></h3>
       </div>
 
       <div className="card">
-        <h3>{noText?.before?.heading}</h3>
+        <h3>{lang?.before?.heading}</h3>
         <ul className='list'>
-          <li>{noText?.before?.step1}</li>
-          <li>{noText?.before?.step2}</li>
-          <li>{noText?.before?.step3}<a href="http://10.12.6.67">{noText?.click}</a></li>
+          <li>{lang?.before?.step1}</li>
+          <li>{lang?.before?.step2}</li>
+          <li>{lang?.before?.step3}<a href="http://10.12.6.67">{lang?.click}</a></li>
         </ul>
       </div>
 
       <div className="card">
-        <h3>{noText?.video?.title}</h3>
+        <h3>{lang?.video?.title}</h3>
         <video src={video} controls type="video/mp4" width="100%">
           <track default label="Norsk" kind="subtitles" srcLang="no" src={noSub} />
           <track default label="English" kind="subtitles" srcLang="en" src={enSub} />
@@ -46,15 +63,15 @@ function Home() {
 
       
       <div className="card">
-        <h3>{noText?.commands?.title}</h3>
+        <h3>{lang?.commands?.title}</h3>
         <Tooltip anchorSelect=".sudo" place="top">
-          {noText?.commands?.sudo}
+          {lang?.commands?.sudo}
         </Tooltip>
         <Tooltip anchorSelect=".systemctl" place="top">
-          {noText?.commands?.systemctl}
+          {lang?.commands?.systemctl}
         </Tooltip>
         <Tooltip anchorSelect=".echo" place="top">
-          {noText?.commands?.echo}
+          {lang?.commands?.echo}
         </Tooltip>
         <ul>
           <li><a className="sudo">sudo</a> apt-get install gnupg curl</li>
@@ -80,26 +97,26 @@ function Home() {
       </div>
 
       <div className="card">
-        <img src={image1} alt={noText?.guide?.image1?.alt} />
-        <h3>{noText?.guide?.image1?.title1}<br />{noText?.guide?.image1?.title2}</h3>
+        <img src={image1} alt={lang?.guide?.image1?.alt} />
+        <h3>{lang?.guide?.image1?.title1}<br />{lang?.guide?.image1?.title2}</h3>
       </div>
 
       <div className='line'></div>
 
       <div className="card">
-        <img src={image2} alt={noText?.guide?.image2?.alt} />
-        <h3>{noText?.guide?.image2?.title}</h3>
+        <img src={image2} alt={lang?.guide?.image2?.alt} />
+        <h3>{lang?.guide?.image2?.title}</h3>
       </div>
 
       <div className='line'></div>
 
       <div className="card">
-        <img src={image3} alt={noText?.guide?.image3?.alt}/>
-        <h3>{noText?.guide?.image3?.title}</h3>
+        <img src={image3} alt={lang?.guide?.image3?.alt}/>
+        <h3>{lang?.guide?.image3?.title}</h3>
       </div>
 
       <footer className="read-the-docs">
-        {noText?.footer}
+        {lang?.footer}
       </footer>
     </>
   )
