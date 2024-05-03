@@ -5,31 +5,33 @@ import image1 from "../assets/1.png"
 import image2 from "../assets/2.png"
 import image3 from "../assets/3.png"
 
+import noText from "../assets/noText.json"
+
 import { Tooltip } from 'react-tooltip'
 
 function Home() {
 
-  document.title = "Guide til MongoDB på ubuntu"
+  document.title = noText?.title
 
   return (
     <>
-      <h1>MongoDB <code>Guide</code></h1>
+      <h1>{noText?.heading?.title} <code>Guide</code></h1>
       <div className="card">
-        <h2>Her skal jeg gå igjennom oppsett av MongoDB lokalt på en ubunut maskin.</h2>
-        <h3>For å finne ut mer om MongoDB kan du trykke <a href="https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/">her</a></h3>
+        <h2>{noText?.heading?.heading}</h2>
+        <h3>{noText?.heading?.heading2}<a href="https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/">{noText?.click}</a></h3>
       </div>
 
       <div className="card">
-        <h3>Dette må du ha klart før du begynner.</h3>
+        <h3>{noText?.before?.heading}</h3>
         <ul className='list'>
-          <li>En maskin som kjører Ubuntu</li>
-          <li>Tilgang til internett</li>
-          <li>Hvis du lurer på hvordan du lager en VM kan du klikke <a href="http://10.12.6.67">her</a></li>
+          <li>{noText?.before?.step1}</li>
+          <li>{noText?.before?.step2}</li>
+          <li>{noText?.before?.step3}<a href="http://10.12.6.67">{noText?.click}</a></li>
         </ul>
       </div>
 
       <div className="card">
-        <h3>Her er en video som går igjennom det.</h3>
+        <h3>{noText?.video?.title}</h3>
         <video src={video} controls type="video/mp4" width="100%">
           <track default label="Norsk" kind="subtitles" srcLang="no" src={noSub} />
           <track default label="English" kind="subtitles" srcLang="en" src={enSub} />
@@ -38,15 +40,15 @@ function Home() {
 
       
       <div className="card">
-        <h3>Her er kommandoene som blir brukt i videoen.</h3>
+        <h3>{noText?.commands?.title}</h3>
         <Tooltip anchorSelect=".sudo" place="top">
-          "Sudo" betyr "superbruker gjør," og lar brukere utføre kommandoer med forhøyede rettigheter.
+          {noText?.commands?.sudo}
         </Tooltip>
         <Tooltip anchorSelect=".systemctl" place="top">
-          Systemctl er en kommando i Unix/Linux-systemer som brukes til å administrere systemtjenester, som å starte, stoppe og starte på nytt.
+          {noText?.commands?.systemctl}
         </Tooltip>
         <Tooltip anchorSelect=".echo" place="top">
-          Echo er en kommando i Unix/Linux-systemer som brukes til å vise en linje med tekst eller variabelt innhold i terminalen.
+          {noText?.commands?.echo}
         </Tooltip>
         <ul>
           <li><a className="sudo">sudo</a> apt-get install gnupg curl</li>
@@ -72,26 +74,26 @@ function Home() {
       </div>
 
       <div className="card">
-        <img src={image1} alt="Mongosh terminal" />
-        <h3>På linjen hvor det står "Connecting to:", er databse URI-en din. <br /> Denne trenger du når du skal koble til databasen igjennom javascript.</h3>
+        <img src={image1} alt={noText?.guide?.image1?.alt} />
+        <h3>{noText?.guide?.image1?.title1}<br />{noText?.guide?.image1?.title2}</h3>
       </div>
 
       <div className='line'></div>
 
       <div className="card">
-        <img src={image2} alt="Koble til database med javascript og mongoose" />
-        <h3>Her er et eksempel på hvordan man kan koble til databasen med javascript og mongoose. Jeg vil anbefale å bruke mongoose over mongodb, fordi det er lettere å sette opp og det er lettere å bruke.</h3>
+        <img src={image2} alt={noText?.guide?.image2?.alt} />
+        <h3>{noText?.guide?.image2?.title}</h3>
       </div>
 
       <div className='line'></div>
 
       <div className="card">
-        <img src={image3} alt="Koble til database med javascript og mongodb" />
-        <h3>Her er et eksempel på hvordan man kan koble til databasen med javascript og mongodb.</h3>
+        <img src={image3} alt={noText?.guide?.image3?.alt}/>
+        <h3>{noText?.guide?.image3?.title}</h3>
       </div>
 
       <footer className="read-the-docs">
-        Guide og nettside laget av Martin LJ
+        {noText?.footer}
       </footer>
     </>
   )

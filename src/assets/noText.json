@@ -1,0 +1,41 @@
+{
+    "title": "Guide til MongoDB på ubuntu",
+    "click": "her",
+    "heading": {
+        "title": "MongoDB",
+        "heading": "Her skal jeg gå igjennom oppsett av MongoDB lokalt på en ubunut maskin.",
+        "heading2": "For å finne ut mer om MongoDB kan du trykke "
+    },
+    "before": {
+        "heading": "Dette må du ha klart før du begynner.",
+        "step1": "En maskin som kjører Ubuntu",
+        "step2": "Tilgang til internett",
+        "step3": "Hvis du lurer på hvordan du lager en VM kan du klikke "
+    },
+    "video": {
+        "title": "Her er en video som går igjennom det."
+    },
+    "commands": {
+        "title": "Her er kommandoene som blir brukt i videoen.",
+        "sudo": "'Sudo' betyr 'superbruker gjør,' og lar brukere utføre kommandoer med forhøyede rettigheter.",
+        "systemctl": "Systemctl er en kommando i Unix/Linux-systemer som brukes til å administrere systemtjenester, som å starte, stoppe og starte på nytt.",
+        "echo": "Echo er en kommando i Unix/Linux-systemer som brukes til å vise en linje med tekst eller variabelt innhold i terminalen."
+    },
+    "guide": {
+        "image1": {
+            "alt": "Mongosh terminal",
+            "title1": "På linjen hvor det står 'Connecting to:', er databse URI-en din.",
+            "title2": "Denne trenger du når du skal koble til databasen igjennom javascript."
+        },
+        "image2": {
+            "alt": "Koble til database med javascript og mongoose",
+            "title": "Her er et eksempel på hvordan man kan koble til databasen med javascript og mongoose. Jeg vil anbefale å bruke mongoose over mongodb, fordi det er lettere å sette opp og det er lettere å bruke."
+        },
+        "image3": {
+            "alt": "Koble til database med javascript og mongodb",
+            "title": "Her er et eksempel på hvordan man kan koble til databasen med javascript og mongodb."
+        }
+    },
+    "footer": "Guide og nettside laget av Martin LJ"
+
+}
