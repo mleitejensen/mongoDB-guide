@@ -14,7 +14,7 @@ import { useState } from "react"
 function Home() {
   const [lang, setLang] = useState(noText)
 
-  document.title = noText?.title
+  document.title = lang?.title
 
   const changeTextToNO = () => {
     setLang(noText)
