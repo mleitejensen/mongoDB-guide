@@ -67,7 +67,7 @@ function Home() {
         <Tooltip anchorSelect=".echo" place="top">
           {lang?.commands?.echo}
         </Tooltip>
-        <ul>
+        <ul className="code-list">
           <li><a className="sudo">sudo</a> apt-get install gnupg curl</li>
           <li>curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
