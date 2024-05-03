@@ -47,17 +47,6 @@
 
 }
 
-.code-list {
-  font-family: 'Courier New', Courier, monospace;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.code-list li {
-  margin-bottom: 5px;
-  white-space: pre-wrap;
-}
-
 .card img{
   width: 100%;
   max-width: 1000px;
@@ -71,3 +60,16 @@
   gap: 10px;
 }
 
+.code-list {
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px;
+  border-radius: 5px;
+  list-style: none;
+}
+
+.code-list li {
+  margin-bottom: 5px;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  border: 1px solid #b8b4b4;
+}
