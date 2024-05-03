@@ -21,13 +21,7 @@ function Home() {
   }
 
   const changeTextToEN = () => {
-    if(lang?.lang === "NO"){
-      console.log("NO")
-    }
     setLang(enText)
-    if(lang?.lang === "NO"){
-      console.log("NO")
-    }
   }
 
 
