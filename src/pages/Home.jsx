@@ -6,6 +6,7 @@ import image2 from "../assets/2.png"
 import image3 from "../assets/3.png"
 
 import noText from "../assets/noText.json"
+import enText from "../assets/enText.json"
 
 import { Tooltip } from 'react-tooltip'
 
@@ -15,6 +16,11 @@ function Home() {
 
   return (
     <>
+      <div className="lang">
+        <button>NO</button>
+        <button>EN</button>
+      </div>
+
       <h1>{noText?.heading?.title} <code>Guide</code></h1>
       <div className="card">
         <h2>{noText?.heading?.heading}</h2>
