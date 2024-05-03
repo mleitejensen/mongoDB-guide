@@ -1,0 +1,40 @@
+{
+    "title": "Guide to MongoDB on Ubuntu",
+    "click": "here",
+    "heading": {
+        "title": "MongoDB",
+        "heading": "Here I will go through setting up MongoDB locally on an Ubuntu machine.",
+        "heading2": "To learn more about MongoDB, you can click "
+    },
+    "before": {
+        "heading": "This is what you need to have ready before you start.",
+        "step1": "A machine running Ubuntu",
+        "step2": "Access to the internet",
+        "step3": "If you're wondering how to create a VM, you can click "
+    },
+    "video": {
+        "title": "Here is a video that goes through it."
+    },
+    "commands": {
+        "title": "Here are the commands used in the video.",
+        "sudo": "'Sudo' means 'superuser do,' and allows users to execute commands with elevated privileges.",
+        "systemctl": "Systemctl is a command in Unix/Linux systems used to manage system services, like starting, stopping, and restarting.",
+        "echo": "Echo is a command in Unix/Linux systems used to display a line of text or variable content in the terminal."
+    },
+    "guide": {
+        "image1": {
+            "alt": "Mongosh terminal",
+            "title1": "On the line where it says 'Connecting to:', is your database URI.",
+            "title2": "You'll need this when connecting to the database through javascript."
+        },
+        "image2": {
+            "alt": "Connect to database with javascript and mongoose",
+            "title": "Here is an example of how to connect to the database with javascript and mongoose. I would recommend using mongoose over mongodb because it's easier to set up and easier to use."
+        },
+        "image3": {
+            "alt": "Connect to database with javascript and mongodb",
+            "title": "Here is an example of how to connect to the database with javascript and mongodb."
+        }
+    },
+    "footer": "Guide and website created by Martin LJ"
+}

@@ -3,7 +3,7 @@
     "click": "her",
     "heading": {
         "title": "MongoDB",
-        "heading": "Her skal jeg gå igjennom oppsett av MongoDB lokalt på en ubunut maskin.",
+        "heading": "Her skal jeg gå igjennom oppsett av MongoDB lokalt på en Ubuntu maskin.",
         "heading2": "For å finne ut mer om MongoDB kan du trykke "
     },
     "before": {
