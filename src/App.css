@@ -73,3 +73,12 @@
   white-space: pre-wrap;
   border: 1px solid #b8b4b4;
 }
+
+.line{
+  margin: auto;
+  height: 2px;
+  width: 75%;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #b8b4b4;
+}

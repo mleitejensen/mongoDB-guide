@@ -38,6 +38,8 @@ function Home() {
         <h3>{lang?.heading?.heading2}<a href="https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/">{lang?.click}</a></h3>
       </div>
 
+      <div className='line'></div>
+
       <div className="card">
         <h3>{lang?.before?.heading}</h3>
         <ul className='list'>
@@ -46,6 +48,8 @@ function Home() {
           <li>{lang?.before?.step3}<a href="http://10.12.6.67">{lang?.click}</a></li>
         </ul>
       </div>
+
+      <div className='line'></div>
 
       <div className="card">
         <h3>{lang?.video?.title}</h3>
@@ -89,6 +93,8 @@ function Home() {
           <li>mongosh [IP]</li>
         </ul>
       </div>
+
+      <div className='line'></div>
 
       <div className="card">
         <h2>{lang?.guide?.image1?.title1}</h2>
