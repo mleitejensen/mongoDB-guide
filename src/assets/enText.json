@@ -25,8 +25,9 @@
     "guide": {
         "image1": {
             "alt": "Mongosh terminal",
-            "title1": "On the line where it says 'Connecting to:', is your database URI.",
-            "title2": "You'll need this when connecting to the database through javascript."
+            "title1": "After you have followed the video above, you can see below to see how to connect to the database with javascript.",
+            "title2": "On the line where it says 'Connecting to:', is your database URI.",
+            "title3": "You'll need this when connecting to the database through javascript."
         },
         "image2": {
             "alt": "Connect to database with javascript and mongoose",

@@ -91,22 +91,23 @@ function Home() {
       </div>
 
       <div className="card">
+        <h2>{lang?.guide?.image1?.title1}</h2>
         <img src={image1} alt={lang?.guide?.image1?.alt} />
-        <h3>{lang?.guide?.image1?.title1}<br />{lang?.guide?.image1?.title2}</h3>
+        <h3>{lang?.guide?.image1?.title2}<br />{lang?.guide?.image1?.title3}</h3>
       </div>
 
       <div className='line'></div>
 
       <div className="card">
-        <img src={image2} alt={lang?.guide?.image2?.alt} />
         <h3>{lang?.guide?.image2?.title}</h3>
+        <img src={image2} alt={lang?.guide?.image2?.alt} />
       </div>
 
       <div className='line'></div>
 
       <div className="card">
-        <img src={image3} alt={lang?.guide?.image3?.alt}/>
         <h3>{lang?.guide?.image3?.title}</h3>
+        <img src={image3} alt={lang?.guide?.image3?.alt}/>
       </div>
 
       <footer className="read-the-docs">
