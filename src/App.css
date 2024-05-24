@@ -62,6 +62,7 @@
 
 .code-list {
   font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
   padding: 10px;
   border-radius: 5px;
   list-style: none;

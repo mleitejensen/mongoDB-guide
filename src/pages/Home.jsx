@@ -62,7 +62,7 @@ function Home() {
       
       <div className="card">
         <h3>{lang?.commands?.title}</h3>
-        <Tooltip anchorSelect=".sudo" place="top">
+        <Tooltip anchorSelect=".sudo" place="top" style={{backgroundColor: "#000000"}}>
           {lang?.commands?.sudo}
         </Tooltip>
         <Tooltip anchorSelect=".systemctl" place="top">
