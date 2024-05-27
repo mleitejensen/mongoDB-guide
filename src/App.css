@@ -76,7 +76,7 @@
 }
 
 .line{
-  margin: auto;
+  margin: 20px auto;
   height: 2px;
   width: 75%;
   border-radius: 4px;
